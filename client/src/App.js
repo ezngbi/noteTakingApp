@@ -1,25 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import NotesContainer from './components/NotesContainer'
 import { nanoid } from 'nanoid';
 
 function App() {
-  const [notes, setNotes] = useState([
-    {
-      id: nanoid(),
-      text: "testing testing 1",
-      date: 'mm/dd/yyyy'
-    },
-    {
-      id: nanoid(),
-      text: "testing testing 2",
-      date: 'mm/dd/yyyy'
-    },
-    {
-      id: nanoid(),
-      text: "testing testing 3",
-      date: 'mm/dd/yyyy'
-    }
-  ]);
+  const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+    fetch('/notes').then(
+      res => res.json()
+    ).then(
+      newNotes => {
+        setNotes(newNotes)
+      }
+    )
+  }, [])
 
   const addNote = (text) => {
     const date = new Date();
@@ -29,7 +23,17 @@ function App() {
       date: date.toLocaleDateString()
     }
     const newNotes = [...notes, newNote];
-    setNotes(newNotes)
+
+    //send the request back to server
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newNote)
+    };
+    fetch('/notes', requestOptions)
+      .then(() => {
+        setNotes(newNotes)
+    })
   }
 
   const deleteNote = (id) => {
