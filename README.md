@@ -20,10 +20,10 @@ The design credit goes to https://dribbble.com/shots/11875872-A-simple-and-light
       - `npm i`
       - `npm run dev`
   - To set up the client:
-  -   `cd client`
-  -   `npm i`
-  -   `npm start`
-  -   The client should automatically open the website on your server. If it doesn't then you can access it by going to localhost:3000
+    -   `cd client`
+    -   `npm i`
+    -   `npm start`
+    -   The client should automatically open the website on your server. If it doesn't then you can access it by going to localhost:3000
 
 # How can this project be improved:
 ## Backend:
