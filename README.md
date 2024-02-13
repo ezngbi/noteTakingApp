@@ -41,3 +41,7 @@ The design credit goes to https://dribbble.com/shots/11875872-A-simple-and-light
 - Having a search functionality
 - Login system
 - This hasn't fulfilled the CRUD principle because we are missing the "U". Therefore, we need to add the Update functionality.
+
+# App demo
+<img width="1627" alt="image" src="https://github.com/ezngbi/noteTakingApp/assets/67848975/94f56d88-2d04-48d9-89a7-ef8c00c52b01">
+
