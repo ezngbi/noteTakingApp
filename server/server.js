@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.json());
 
-const notesList = [{
+let notesList = [{
   id: nanoid(),
   text: "testing testing 1",
   date: 'mm/dd/yyyy'
@@ -25,8 +25,15 @@ app.get('/notes', (req, res) => {
   res.json(notesList);
 })
 
-app.post('/notes', async (req, res) => {
+app.post('/notes', (req, res) => {
   notesList.push(req.body);
+  res.end()
+})
+
+app.delete('/notes/:id', (req, res) => {
+  const {id} = req.params;
+  console.log(id)
+  notesList = notesList.filter((note) => note.id !== id)
   res.end()
 })
 
