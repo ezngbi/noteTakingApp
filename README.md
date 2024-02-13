@@ -1,5 +1,5 @@
 # Welcome to my note taking app
-The design credit goes to https://dribbble.com/shots/11875872-A-simple-and-lightweight-note-app/attachments/3501129?mode=media
+The design credit goes to https://dribbble.com/shots/11875872-A-simple-and-lightweight-note-app
 
 # Backend
 - Express.js
