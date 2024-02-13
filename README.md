@@ -11,6 +11,7 @@ The design credit goes to https://dribbble.com/shots/11875872-A-simple-and-light
 # Frontend
 - HTML, CSS, JavaScript, React.js
 - React components include: Note (containing the content and display the notes), NoteContainer (containing the Note objects), AddNote (a special "Note" that is used just for adding new notes)
+- Responsive design
 
 # How to use the code
   - Download the zip file from the github repo
