@@ -40,3 +40,4 @@ The design credit goes to https://dribbble.com/shots/11875872-A-simple-and-light
 - Adding tags to notes
 - Having a search functionality
 - Login system
+- This hasn't fulfilled the CRUD principle because we are missing the "U". Therefore, we need to add the Update functionality.
