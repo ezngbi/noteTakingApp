@@ -20,9 +20,30 @@ function App() {
       date: 'mm/dd/yyyy'
     }
   ]);
+
+  const addNote = (text) => {
+    const date = new Date();
+    const newNote = {
+      id: nanoid(),
+      text: text,
+      date: date.toLocaleDateString()
+    }
+    const newNotes = [...notes, newNote];
+    setNotes(newNotes)
+  }
+
+  const deleteNote = (id) => {
+    const newNotes = notes.filter((note) => note.id !== id)
+    setNotes(newNotes);
+  }
+
   return (
     <div className='container'>
-      <NotesContainer notes={ notes} />
+      <h1 style={{color: 'white'}}>Notes</h1>
+      <NotesContainer notes={notes}
+        handleAddNote={addNote}
+        handleDeleteNote={deleteNote}
+      />
     </div>
   )
 }
